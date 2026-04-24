@@ -1,13 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
-}
-
 body {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
+  font-family: Arial;
 }
 
 header {
@@ -16,7 +10,7 @@ header {
 }
 
 header h1 {
-  font-size: 40px;
+  font-size: 42px;
   color: cyan;
 }
 
@@ -25,7 +19,7 @@ nav {
   justify-content: center;
   gap: 20px;
   background: rgba(255,255,255,0.05);
-  padding: 10px;
+  padding: 12px;
 }
 
 nav a {
@@ -38,29 +32,16 @@ section {
   text-align: center;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.card {
-  padding: 15px 20px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-}
-
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
 }
 
 .project {
-  padding: 20px;
   background: rgba(255,255,255,0.05);
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 12px;
   transition: 0.3s;
 }
 
@@ -70,12 +51,7 @@ section {
 }
 
 .project a {
-  color: cyan;
-  display: block;
+  display: inline-block;
   margin-top: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
+  color: cyan;
 }
