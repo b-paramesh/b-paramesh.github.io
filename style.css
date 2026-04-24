@@ -1,57 +1,71 @@
 body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  font-family: Arial;
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: #0f172a;
+  color: #e2e8f0;
 }
 
-header {
+.hero {
   text-align: center;
-  padding: 50px;
+  padding: 60px 20px;
 }
 
-header h1 {
-  font-size: 42px;
-  color: cyan;
+.hero h1 {
+  font-size: 40px;
+  color: #38bdf8;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background: rgba(255,255,255,0.05);
+  background: #1e293b;
   padding: 12px;
 }
 
-nav a {
+.navbar a {
   color: white;
   text-decoration: none;
 }
 
-section {
-  padding: 50px;
+.section {
+  padding: 50px 20px;
   text-align: center;
 }
 
-.projects-container {
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills-grid span {
+  background: #1e293b;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
+  margin-top: 20px;
 }
 
-.project {
-  background: rgba(255,255,255,0.05);
+.card {
+  background: #1e293b;
   padding: 20px;
   border-radius: 12px;
   transition: 0.3s;
 }
 
-.project:hover {
-  transform: translateY(-10px);
-  background: rgba(0,255,255,0.2);
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.project a {
+.card a {
   display: inline-block;
   margin-top: 10px;
-  color: cyan;
+  color: #38bdf8;
 }
