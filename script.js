@@ -1,44 +1,53 @@
-const toggle = document.getElementById("theme-toggle");
-
-// Load saved theme
-if (localStorage.getItem("theme") === "light") {
-document.body.classList.add("light");
-toggle.textContent = "☀️";
-}
-
-toggle.onclick = () => {
-document.body.classList.toggle("light");
-const isLight = document.body.classList.contains("light");
-toggle.textContent = isLight ? "☀️" : "🌙";
-localStorage.setItem("theme", isLight ? "light" : "dark");
+// THEME TOGGLE
+const toggleBtn = document.getElementById("theme-toggle");
+toggleBtn.onclick = () => {
+  document.body.classList.toggle("dark");
 };
 
-// Smooth scroll
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-anchor.onclick = function(e) {
-e.preventDefault();
-document.querySelector(this.getAttribute("href"))
-.scrollIntoView({ behavior: "smooth" });
-};
-});
-
-// Fade animation
+// FADE ANIMATION ON SCROLL
 const faders = document.querySelectorAll(".fade");
 
-window.addEventListener("scroll", () => {
-faders.forEach(el => {
-if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-el.classList.add("show");
-}
-});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
 });
 
-// Modal
+faders.forEach(el => observer.observe(el));
+
+
+// ✅ MODAL FIX (IMPORTANT)
 function openModal(link) {
-document.getElementById("modal").style.display = "block";
-document.getElementById("modalFrame").src = link;
+  const modal = document.getElementById("modal");
+  const frame = document.getElementById("modalFrame");
+
+  // fallback if iframe blocked
+  frame.src = link;
+
+  modal.style.display = "flex";
+
+  // If Google blocks iframe → open new tab automatically
+  setTimeout(() => {
+    if (!frame.contentWindow || frame.contentWindow.length === 0) {
+      window.open(link.replace("/preview", "/view"), "_blank");
+    }
+  }, 1200);
 }
 
 function closeModal() {
-document.getElementById("modal").style.display = "none";
+  const modal = document.getElementById("modal");
+  const frame = document.getElementById("modalFrame");
+
+  modal.style.display = "none";
+  frame.src = "";
 }
+
+// CLOSE ON OUTSIDE CLICK
+window.onclick = function (e) {
+  const modal = document.getElementById("modal");
+  if (e.target === modal) {
+    closeModal();
+  }
+};
