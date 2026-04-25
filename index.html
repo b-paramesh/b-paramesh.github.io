@@ -2,67 +2,79 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paramesh Bhupathi</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramesh Bhupathi</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="hero">
   <h1>Paramesh Bhupathi</h1>
-  <p>🤖 AI & Full Stack Developer</p>
+  <p class="subtitle">🤖 AI | ML | Full Stack Developer</p>
 </header>
 
 <nav class="navbar">
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contact">Contact</a>
+  <a href="#projects">🚀 Projects</a>
+  <a href="#certifications">📜 Certifications</a>
+  <a href="#contact">📞 Contact</a>
   <button id="theme-toggle">🌙</button>
 </nav>
 
-<section id="about" class="section fade">
-  <h2>👨‍💻 About</h2>
-  <p>Computer Science student building AI systems, ML models, and full-stack apps.</p>
-</section>
-
-<section id="skills" class="section fade">
-  <h2>🛠 Skills</h2>
-  <div class="skills-grid">
-    <span>Java</span><span>Python</span><span>C++</span>
-    <span>React</span><span>Node.js</span><span>FastAPI</span>
-    <span>MongoDB</span><span>Machine Learning</span>
-  </div>
-</section>
+<!-- PROJECTS -->
 
 <section id="projects" class="section fade">
   <h2>🚀 Projects</h2>
+
+  <h3 class="section-sub">🔥 Featured</h3>
   <div class="grid">
 
 ```
-<div class="card">
+<div class="card highlight">
   <h3>🚢 Ship Detection</h3>
-  <p>Faster R-CNN based maritime AI system.</p>
-  <a href="https://ship-detection-using-fater-rcnn.vercel.app/" target="_blank">Live</a>
+  <p>Faster R-CNN maritime AI system</p>
+  <div class="tags"><span>Python</span><span>PyTorch</span><span>FastAPI</span></div>
+  <a href="https://ship-detection-using-fater-rcnn.vercel.app/" target="_blank">🔗 Live Demo</a>
 </div>
 
-<div class="card">
+<div class="card highlight">
   <h3>💰 Crypto Intelligence</h3>
-  <p>LSTM crypto prediction platform.</p>
-  <a href="https://crypto-new-v2x6.onrender.com" target="_blank">Live</a>
+  <p>LSTM prediction platform</p>
+  <div class="tags"><span>Python</span><span>LSTM</span><span>Pandas</span></div>
+  <a href="https://crypto-new-v2x6.onrender.com" target="_blank">🔗 Live Demo</a>
 </div>
 
-<div class="card">
+<div class="card highlight">
   <h3>💼 Jobby App</h3>
-  <p>React job portal with auth.</p>
-  <a href="https://paramjobsw1.ccbp.tech/jobs" target="_blank">Live</a>
+  <p>React job portal</p>
+  <div class="tags"><span>React</span><span>API</span></div>
+  <a href="https://paramjobsw1.ccbp.tech/jobs" target="_blank">🔗 Live Demo</a>
 </div>
 ```
 
   </div>
+
+  <h3 class="section-sub">📊 ML Projects</h3>
+  <div class="grid small">
+
+```
+<div class="card"><a href="https://anomaly-detection-system-qyuhahobxrmkjcfx3tw9pp.streamlit.app/" target="_blank">📉 Anomaly Detection</a></div>
+<div class="card"><a href="https://carpricepredictionusingann-lxrpevcozfjlqbi9c3zjuq.streamlit.app/" target="_blank">🚗 Car Price</a></div>
+<div class="card"><a href="https://customerriskpredictionsystemusingknn-mzdothxrqfvzkaqzh5kdyb.streamlit.app/" target="_blank">⚠️ Risk Prediction</a></div>
+<div class="card"><a href="https://hierachicalclustering-45ep98mumfmegvu4loswyi.streamlit.app/" target="_blank">📌 Clustering</a></div>
+<div class="card"><a href="https://kchousepricepredictionstackingapppy-df8cfhhst69e7yoigdhbqq.streamlit.app/" target="_blank">🏠 House Price</a></div>
+<div class="card"><a href="https://loanpredictionlinearpolynomialrbfkernals-zoz2vvnaqrgpyp2wmxu8v.streamlit.app/" target="_blank">💳 Loan Prediction</a></div>
+<div class="card"><a href="https://multiplelinearregression-nbhj2szcuvvvfn4hslc4bw.streamlit.app/" target="_blank">📈 Linear Regression</a></div>
+<div class="card"><a href="https://projecttaskmanagerapp-c3nh8x4drxbwo5jt5un7uf.streamlit.app/" target="_blank">📝 Task Manager</a></div>
+<div class="card"><a href="https://telco-churn-app-sjsfdbhpdiqnpsvaomlye2.streamlit.app/" target="_blank">🔄 Churn</a></div>
+<div class="card"><a href="https://wholesale-customer-segmentation-using-k-means-68ngvorcz695zpuf.streamlit.app/" target="_blank">👥 Segmentation</a></div>
+```
+
+  </div>
 </section>
+
+<!-- CERTIFICATIONS -->
 
 <section id="certifications" class="section fade">
   <h2>📜 Certifications</h2>
@@ -70,29 +82,12 @@
   <div class="grid">
 
 ```
-<div class="card cert" onclick="openModal('https://drive.google.com/file/d/1G-FLH2Udwmhdjcwian-2cC48xTNXkawG/preview')">
-  ☁️ AWS Cloud
-</div>
-
-<div class="card cert" onclick="openModal('https://drive.google.com/file/d/10783xv2BcpIYIPq3pczbGPm_eRAXKau4/preview')">
-  🗄️ DB Design
-</div>
-
-<div class="card cert" onclick="openModal('https://drive.google.com/file/d/15tCUpHoMpH3sIw4baz-vVbpZlZcqgxDc/preview')">
-  📊 SQL
-</div>
-
-<div class="card cert" onclick="openModal('https://drive.google.com/file/d/1pAq5ljAxppBqZvqkElGOPi3qC45f-uZC/preview')">
-  📈 Altair 14
-</div>
-
-<div class="card cert" onclick="openModal('https://drive.google.com/file/d/1BKeFxhOS_Qp79Cr7kXSMv-GNroHWytD-/preview')">
-  📊 Altair 12
-</div>
-
-<div class="card cert" onclick="openModal('https://drive.google.com/file/d/18nZuHPsYtIVsFhmtFI9gR1xvmpW2gzL8/preview')">
-  💻 NPTEL Java
-</div>
+<div class="card cert" onclick="openModal('https://drive.google.com/file/d/1G-FLH2Udwmhdjcwian-2cC48xTNXkawG/preview')">☁️ AWS</div>
+<div class="card cert" onclick="openModal('https://drive.google.com/file/d/10783xv2BcpIYIPq3pczbGPm_eRAXKau4/preview')">🗄️ DB Design</div>
+<div class="card cert" onclick="openModal('https://drive.google.com/file/d/15tCUpHoMpH3sIw4baz-vVbpZlZcqgxDc/preview')">📊 SQL</div>
+<div class="card cert" onclick="openModal('https://drive.google.com/file/d/1pAq5ljAxppBqZvqkElGOPi3qC45f-uZC/preview')">📈 Altair 14</div>
+<div class="card cert" onclick="openModal('https://drive.google.com/file/d/1BKeFxhOS_Qp79Cr7kXSMv-GNroHWytD-/preview')">📊 Altair 12</div>
+<div class="card cert" onclick="openModal('https://drive.google.com/file/d/18nZuHPsYtIVsFhmtFI9gR1xvmpW2gzL8/preview')">💻 NPTEL</div>
 ```
 
   </div>
@@ -108,8 +103,6 @@
 <footer>
   <p>© 2026 Paramesh Bhupathi</p>
 </footer>
-
-<!-- Modal -->
 
 <div id="modal" class="modal">
   <span class="close" onclick="closeModal()">×</span>
